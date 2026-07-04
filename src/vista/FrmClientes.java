@@ -48,6 +48,11 @@ public class FrmClientes extends javax.swing.JFrame {
         btnEditar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
         btnBuscar = new javax.swing.JButton();
+        Buscar = new javax.swing.JPanel();
+        lblBuscar = new javax.swing.JLabel();
+        btnBuscarTabla = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblClientes = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Gestionar Clientes");
@@ -144,6 +149,7 @@ public class FrmClientes extends javax.swing.JFrame {
         btnBuscar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(this::btnBuscarActionPerformed);
 
         javax.swing.GroupLayout BotonesLayout = new javax.swing.GroupLayout(Botones);
         Botones.setLayout(BotonesLayout);
@@ -158,9 +164,9 @@ public class FrmClientes extends javax.swing.JFrame {
                 .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(14, 14, 14))
         );
@@ -169,16 +175,65 @@ public class FrmClientes extends javax.swing.JFrame {
             .addGroup(BotonesLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(BotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(btnBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
+                    .addComponent(btnNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscar))
                 .addContainerGap())
         );
 
-        getContentPane().add(Botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 680, 50));
+        getContentPane().add(Botones, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 680, 40));
+
+        Buscar.setBackground(new java.awt.Color(204, 204, 204));
+
+        lblBuscar.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblBuscar.setText("Buscar:_________________________________________");
+
+        btnBuscarTabla.setBackground(new java.awt.Color(102, 0, 0));
+        btnBuscarTabla.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnBuscarTabla.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarTabla.setText("Buscar");
+
+        javax.swing.GroupLayout BuscarLayout = new javax.swing.GroupLayout(Buscar);
+        Buscar.setLayout(BuscarLayout);
+        BuscarLayout.setHorizontalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BuscarLayout.createSequentialGroup()
+                .addGap(135, 135, 135)
+                .addComponent(lblBuscar)
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(151, Short.MAX_VALUE))
+        );
+        BuscarLayout.setVerticalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BuscarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBuscar)
+                    .addComponent(btnBuscarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 680, 30));
+
+        tblClientes.setBackground(new java.awt.Color(204, 204, 204));
+        tblClientes.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Id", "DNI", "Nombres", "Apellidos", "Sexo", "Teléfono", "Estado"
+            }
+        ));
+        jScrollPane1.setViewportView(tblClientes);
+
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 237, 680, 100));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -190,6 +245,10 @@ public class FrmClientes extends javax.swing.JFrame {
     private void txtNombresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombresActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombresActionPerformed
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -218,9 +277,11 @@ public class FrmClientes extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Botones;
+    private javax.swing.JPanel Buscar;
     private javax.swing.JPanel Datos;
     private javax.swing.JLabel Fondo;
     private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnBuscarTabla;
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnEliminar;
     private javax.swing.JButton btnGuardar;
@@ -228,6 +289,9 @@ public class FrmClientes extends javax.swing.JFrame {
     private javax.swing.JButton btnNuevo;
     private javax.swing.JCheckBox chkEstado;
     private javax.swing.JComboBox<String> cmbSexo;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBuscar;
+    private javax.swing.JTable tblClientes;
     private javax.swing.JTextField txtApellidos;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDireccion;

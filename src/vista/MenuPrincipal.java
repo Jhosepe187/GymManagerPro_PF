@@ -28,10 +28,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jMenuItem1 = new javax.swing.JMenuItem();
         panelPrincipal = new javax.swing.JPanel();
-        GymManagerPro = new javax.swing.JLabel();
         lblUsuario = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
         menuPrincipal = new javax.swing.JMenuBar();
         menuArchivo = new javax.swing.JMenu();
         itemCerrarSesion = new javax.swing.JMenuItem();
@@ -59,49 +58,37 @@ public class MenuPrincipal extends javax.swing.JFrame {
         menuAyuda = new javax.swing.JMenu();
         itemAcerca = new javax.swing.JMenuItem();
 
-        jMenuItem1.setText("jMenuItem1");
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("GymManagerPro");
         setMaximumSize(new java.awt.Dimension(680, 370));
         setMinimumSize(new java.awt.Dimension(680, 370));
         setPreferredSize(new java.awt.Dimension(680, 370));
-        setResizable(false);
+        setSize(new java.awt.Dimension(680, 370));
 
         panelPrincipal.setMaximumSize(new java.awt.Dimension(680, 347));
         panelPrincipal.setMinimumSize(new java.awt.Dimension(680, 347));
         panelPrincipal.setName(""); // NOI18N
+        panelPrincipal.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        GymManagerPro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Sistema de Gestión para Gimnasios LOGo.png"))); // NOI18N
-
-        lblUsuario.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        lblUsuario.setFont(new java.awt.Font("Arial Black", 1, 14)); // NOI18N
+        lblUsuario.setForeground(new java.awt.Color(255, 255, 255));
         lblUsuario.setText("Usuario:");
+        panelPrincipal.add(lblUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, 80, 20));
 
-        javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
-        panelPrincipal.setLayout(panelPrincipalLayout);
-        panelPrincipalLayout.setHorizontalGroup(
-            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(GymManagerPro, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 330, Short.MAX_VALUE)
-                .addComponent(lblUsuario)
-                .addGap(118, 118, 118))
-        );
-        panelPrincipalLayout.setVerticalGroup(
-            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelPrincipalLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(GymManagerPro)
-                    .addGroup(panelPrincipalLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(lblUsuario)))
-                .addContainerGap(273, Short.MAX_VALUE))
-        );
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Menu Principal.png"))); // NOI18N
+        panelPrincipal.add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(4, 2, 680, 350));
+
+        menuPrincipal.setBackground(new java.awt.Color(102, 0, 0));
+        menuPrincipal.setBorder(null);
+        menuPrincipal.setForeground(new java.awt.Color(255, 255, 255));
+        menuPrincipal.setToolTipText("");
+        menuPrincipal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        menuPrincipal.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        menuPrincipal.setInheritsPopupMenu(true);
+        menuPrincipal.setOpaque(true);
 
         menuArchivo.setText("Archivo");
 
+        itemCerrarSesion.setBackground(new java.awt.Color(102, 0, 0));
         itemCerrarSesion.setText("Cerrar Sesión");
         menuArchivo.add(itemCerrarSesion);
 
@@ -196,7 +183,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(panelPrincipal, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -232,7 +221,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel GymManagerPro;
+    private javax.swing.JLabel Fondo;
     private javax.swing.JMenuItem itemAcerca;
     private javax.swing.JMenuItem itemCerrarSesion;
     private javax.swing.JMenuItem itemClientes;
@@ -248,7 +237,6 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemRutinas;
     private javax.swing.JMenuItem itemSalir;
     private javax.swing.JMenuItem itemUsuarios;
-    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JLabel lblUsuario;
     private javax.swing.JMenu menuArchivo;
     private javax.swing.JMenu menuAsistencias;
