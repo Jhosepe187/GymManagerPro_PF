@@ -30,6 +30,8 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jMenuItem1 = new javax.swing.JMenuItem();
         panelPrincipal = new javax.swing.JPanel();
+        GymManagerPro = new javax.swing.JLabel();
+        lblUsuario = new javax.swing.JLabel();
         menuPrincipal = new javax.swing.JMenuBar();
         menuArchivo = new javax.swing.JMenu();
         itemCerrarSesion = new javax.swing.JMenuItem();
@@ -70,15 +72,32 @@ public class MenuPrincipal extends javax.swing.JFrame {
         panelPrincipal.setMinimumSize(new java.awt.Dimension(680, 347));
         panelPrincipal.setName(""); // NOI18N
 
+        GymManagerPro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Sistema de Gestión para Gimnasios LOGo.png"))); // NOI18N
+
+        lblUsuario.setFont(new java.awt.Font("Arial Black", 1, 12)); // NOI18N
+        lblUsuario.setText("Usuario:");
+
         javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
         panelPrincipal.setLayout(panelPrincipalLayout);
         panelPrincipalLayout.setHorizontalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 680, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(GymManagerPro, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 330, Short.MAX_VALUE)
+                .addComponent(lblUsuario)
+                .addGap(118, 118, 118))
         );
         panelPrincipalLayout.setVerticalGroup(
             panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 347, Short.MAX_VALUE)
+            .addGroup(panelPrincipalLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addGroup(panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(GymManagerPro)
+                    .addGroup(panelPrincipalLayout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(lblUsuario)))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
 
         menuArchivo.setText("Archivo");
@@ -213,6 +232,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel GymManagerPro;
     private javax.swing.JMenuItem itemAcerca;
     private javax.swing.JMenuItem itemCerrarSesion;
     private javax.swing.JMenuItem itemClientes;
@@ -229,6 +249,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem itemSalir;
     private javax.swing.JMenuItem itemUsuarios;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JLabel lblUsuario;
     private javax.swing.JMenu menuArchivo;
     private javax.swing.JMenu menuAsistencias;
     private javax.swing.JMenu menuAyuda;
