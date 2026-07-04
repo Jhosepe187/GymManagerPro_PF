@@ -28,21 +28,164 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jMenuItem1 = new javax.swing.JMenuItem();
+        panelPrincipal = new javax.swing.JPanel();
+        menuPrincipal = new javax.swing.JMenuBar();
+        menuArchivo = new javax.swing.JMenu();
+        itemCerrarSesion = new javax.swing.JMenuItem();
+        itemSalir = new javax.swing.JMenuItem();
+        menuClientes = new javax.swing.JMenu();
+        itemClientes = new javax.swing.JMenuItem();
+        menuEntrenadores = new javax.swing.JMenu();
+        itemEntrenadores = new javax.swing.JMenuItem();
+        menuMembresias = new javax.swing.JMenu();
+        itemMembresias = new javax.swing.JMenuItem();
+        menuPagos = new javax.swing.JMenu();
+        itemRegistrarPago = new javax.swing.JMenuItem();
+        itemHistorialPagos = new javax.swing.JMenuItem();
+        menuAsistencias = new javax.swing.JMenu();
+        itemRegistrarAsistencia = new javax.swing.JMenuItem();
+        itemHistorialAsistenica = new javax.swing.JMenuItem();
+        menuRutinas = new javax.swing.JMenu();
+        itemRutinas = new javax.swing.JMenuItem();
+        menuUsuarios = new javax.swing.JMenu();
+        itemUsuarios = new javax.swing.JMenuItem();
+        menuReportes = new javax.swing.JMenu();
+        itemReporteClientes = new javax.swing.JMenuItem();
+        itemReportePagos = new javax.swing.JMenuItem();
+        itemReporteAsistencias = new javax.swing.JMenuItem();
+        menuAyuda = new javax.swing.JMenu();
+        itemAcerca = new javax.swing.JMenuItem();
+
+        jMenuItem1.setText("jMenuItem1");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GymManagerPro");
+        setMaximumSize(new java.awt.Dimension(680, 370));
+        setMinimumSize(new java.awt.Dimension(680, 370));
+        setPreferredSize(new java.awt.Dimension(680, 370));
+        setResizable(false);
+
+        panelPrincipal.setMaximumSize(new java.awt.Dimension(680, 347));
+        panelPrincipal.setMinimumSize(new java.awt.Dimension(680, 347));
+        panelPrincipal.setName(""); // NOI18N
+
+        javax.swing.GroupLayout panelPrincipalLayout = new javax.swing.GroupLayout(panelPrincipal);
+        panelPrincipal.setLayout(panelPrincipalLayout);
+        panelPrincipalLayout.setHorizontalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 680, Short.MAX_VALUE)
+        );
+        panelPrincipalLayout.setVerticalGroup(
+            panelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 347, Short.MAX_VALUE)
+        );
+
+        menuArchivo.setText("Archivo");
+
+        itemCerrarSesion.setText("Cerrar Sesión");
+        menuArchivo.add(itemCerrarSesion);
+
+        itemSalir.setText("Salir");
+        menuArchivo.add(itemSalir);
+
+        menuPrincipal.add(menuArchivo);
+
+        menuClientes.setText("Clientes");
+
+        itemClientes.setText("Gestionar Clientes");
+        menuClientes.add(itemClientes);
+
+        menuPrincipal.add(menuClientes);
+
+        menuEntrenadores.setText("Entrenadores");
+
+        itemEntrenadores.setText("Gestionar Entrenadores");
+        menuEntrenadores.add(itemEntrenadores);
+
+        menuPrincipal.add(menuEntrenadores);
+
+        menuMembresias.setText("Membresías");
+
+        itemMembresias.setText("Gestionar Membresias");
+        menuMembresias.add(itemMembresias);
+
+        menuPrincipal.add(menuMembresias);
+
+        menuPagos.setText("Pagos");
+
+        itemRegistrarPago.setText("Registrar Pago");
+        menuPagos.add(itemRegistrarPago);
+
+        itemHistorialPagos.setText("Historial Pagos");
+        menuPagos.add(itemHistorialPagos);
+
+        menuPrincipal.add(menuPagos);
+
+        menuAsistencias.setText("Asistencias");
+
+        itemRegistrarAsistencia.setText("Registrar Asistencia");
+        menuAsistencias.add(itemRegistrarAsistencia);
+
+        itemHistorialAsistenica.setText("Historial de Asistencia");
+        menuAsistencias.add(itemHistorialAsistenica);
+
+        menuPrincipal.add(menuAsistencias);
+
+        menuRutinas.setText("Rutinas");
+
+        itemRutinas.setText("Gestionar Rutinas");
+        itemRutinas.addActionListener(this::itemRutinasActionPerformed);
+        menuRutinas.add(itemRutinas);
+
+        menuPrincipal.add(menuRutinas);
+
+        menuUsuarios.setText("Usuarios");
+
+        itemUsuarios.setText("Gestionar Usuarios");
+        menuUsuarios.add(itemUsuarios);
+
+        menuPrincipal.add(menuUsuarios);
+
+        menuReportes.setText("Reportes");
+
+        itemReporteClientes.setText("Reporte Clientes");
+        menuReportes.add(itemReporteClientes);
+
+        itemReportePagos.setText("Reporte Pagos");
+        menuReportes.add(itemReportePagos);
+
+        itemReporteAsistencias.setText("Reporte Asistencias");
+        menuReportes.add(itemReporteAsistencias);
+
+        menuPrincipal.add(menuReportes);
+
+        menuAyuda.setText("Ayuda");
+
+        itemAcerca.setText("Acerca del Sistema");
+        menuAyuda.add(itemAcerca);
+
+        menuPrincipal.add(menuAyuda);
+
+        setJMenuBar(menuPrincipal);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(panelPrincipal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void itemRutinasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemRutinasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_itemRutinasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +213,33 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenuItem itemAcerca;
+    private javax.swing.JMenuItem itemCerrarSesion;
+    private javax.swing.JMenuItem itemClientes;
+    private javax.swing.JMenuItem itemEntrenadores;
+    private javax.swing.JMenuItem itemHistorialAsistenica;
+    private javax.swing.JMenuItem itemHistorialPagos;
+    private javax.swing.JMenuItem itemMembresias;
+    private javax.swing.JMenuItem itemRegistrarAsistencia;
+    private javax.swing.JMenuItem itemRegistrarPago;
+    private javax.swing.JMenuItem itemReporteAsistencias;
+    private javax.swing.JMenuItem itemReporteClientes;
+    private javax.swing.JMenuItem itemReportePagos;
+    private javax.swing.JMenuItem itemRutinas;
+    private javax.swing.JMenuItem itemSalir;
+    private javax.swing.JMenuItem itemUsuarios;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenu menuArchivo;
+    private javax.swing.JMenu menuAsistencias;
+    private javax.swing.JMenu menuAyuda;
+    private javax.swing.JMenu menuClientes;
+    private javax.swing.JMenu menuEntrenadores;
+    private javax.swing.JMenu menuMembresias;
+    private javax.swing.JMenu menuPagos;
+    private javax.swing.JMenuBar menuPrincipal;
+    private javax.swing.JMenu menuReportes;
+    private javax.swing.JMenu menuRutinas;
+    private javax.swing.JMenu menuUsuarios;
+    private javax.swing.JPanel panelPrincipal;
     // End of variables declaration//GEN-END:variables
 }

@@ -33,13 +33,16 @@ public class Login extends javax.swing.JFrame {
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("GymManagerPro");
+        setMaximumSize(new java.awt.Dimension(680, 370));
+        setSize(new java.awt.Dimension(680, 370));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         txtUsuario.setBackground(new java.awt.Color(153, 0, 0));
         txtUsuario.setFont(new java.awt.Font("Segoe UI", 2, 12)); // NOI18N
         txtUsuario.setForeground(new java.awt.Color(255, 255, 255));
         txtUsuario.addActionListener(this::txtUsuarioActionPerformed);
-        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 210, 30));
+        getContentPane().add(txtUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 130, 190, 30));
 
         jPasswordField1.setBackground(new java.awt.Color(153, 0, 0));
         jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
