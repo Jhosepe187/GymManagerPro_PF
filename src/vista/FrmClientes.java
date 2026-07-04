@@ -51,6 +51,7 @@ public class FrmClientes extends javax.swing.JFrame {
         Buscar = new javax.swing.JPanel();
         lblBuscar = new javax.swing.JLabel();
         btnBuscarTabla = new javax.swing.JButton();
+        txtBuscar = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblClientes = new javax.swing.JTable();
 
@@ -189,32 +190,38 @@ public class FrmClientes extends javax.swing.JFrame {
         Buscar.setBackground(new java.awt.Color(204, 204, 204));
 
         lblBuscar.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        lblBuscar.setText("Buscar:_________________________________________");
+        lblBuscar.setText("Buscar:");
 
         btnBuscarTabla.setBackground(new java.awt.Color(102, 0, 0));
         btnBuscarTabla.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         btnBuscarTabla.setForeground(new java.awt.Color(255, 255, 255));
         btnBuscarTabla.setText("Buscar");
 
+        txtBuscar.setBackground(new java.awt.Color(204, 204, 204));
+        txtBuscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
         javax.swing.GroupLayout BuscarLayout = new javax.swing.GroupLayout(Buscar);
         Buscar.setLayout(BuscarLayout);
         BuscarLayout.setHorizontalGroup(
             BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BuscarLayout.createSequentialGroup()
-                .addGap(135, 135, 135)
+                .addGap(147, 147, 147)
                 .addComponent(lblBuscar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(btnBuscarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(151, Short.MAX_VALUE))
+                .addGap(144, 144, 144))
         );
         BuscarLayout.setVerticalGroup(
             BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(BuscarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblBuscar)
-                    .addComponent(btnBuscarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(lblBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscarTabla, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
         );
 
         getContentPane().add(Buscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 680, 30));
@@ -293,6 +300,7 @@ public class FrmClientes extends javax.swing.JFrame {
     private javax.swing.JLabel lblBuscar;
     private javax.swing.JTable tblClientes;
     private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtBuscar;
     private javax.swing.JTextField txtCorreo;
     private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtDni;

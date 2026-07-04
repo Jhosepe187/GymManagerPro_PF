@@ -14,6 +14,8 @@ public class Pago {
     private double monto;
     private String fechaPago;
     private String metodoPago;
+    private Cliente cliente;
+    private Membresia membresia;
 
     public Pago() {
     }
