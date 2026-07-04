@@ -28,21 +28,218 @@ public class FrmEntrenadores extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        DatosEntre = new javax.swing.JPanel();
+        txtNombres = new javax.swing.JTextField();
+        txtId = new javax.swing.JTextField();
+        txtCorreo = new javax.swing.JTextField();
+        txtDni = new javax.swing.JTextField();
+        txtApellidos = new javax.swing.JTextField();
+        txtTelefono = new javax.swing.JTextField();
+        cmbEspecialidad = new javax.swing.JComboBox<>();
+        chkEstado = new javax.swing.JCheckBox();
+        jLabel1 = new javax.swing.JLabel();
+        Botones = new javax.swing.JPanel();
+        btnNuevo = new javax.swing.JButton();
+        btnLimpiar = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnEditar = new javax.swing.JButton();
+        btnEliminar = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        Buscar = new javax.swing.JPanel();
+        lblBuscar = new javax.swing.JLabel();
+        btnBuscarEntrenador = new javax.swing.JButton();
+        txtBuscar = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tblEntrenadores = new javax.swing.JTable();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMaximumSize(new java.awt.Dimension(680, 357));
+        setMinimumSize(new java.awt.Dimension(680, 357));
+        setResizable(false);
+
+        DatosEntre.setBackground(new java.awt.Color(204, 204, 204));
+        DatosEntre.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        txtNombres.setBackground(new java.awt.Color(153, 153, 153));
+        txtNombres.setForeground(new java.awt.Color(255, 255, 255));
+        DatosEntre.add(txtNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, 90, -1));
+
+        txtId.setBackground(new java.awt.Color(153, 153, 153));
+        txtId.setForeground(new java.awt.Color(255, 255, 255));
+        DatosEntre.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 60, -1));
+
+        txtCorreo.setBackground(new java.awt.Color(153, 153, 153));
+        txtCorreo.setForeground(new java.awt.Color(255, 255, 255));
+        DatosEntre.add(txtCorreo, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, 100, -1));
+
+        txtDni.setBackground(new java.awt.Color(153, 153, 153));
+        txtDni.setForeground(new java.awt.Color(255, 255, 255));
+        DatosEntre.add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 50, 90, -1));
+
+        txtApellidos.setBackground(new java.awt.Color(153, 153, 153));
+        txtApellidos.setForeground(new java.awt.Color(255, 255, 255));
+        DatosEntre.add(txtApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 10, 100, -1));
+
+        txtTelefono.setBackground(new java.awt.Color(153, 153, 153));
+        txtTelefono.setForeground(new java.awt.Color(255, 255, 255));
+        DatosEntre.add(txtTelefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, 100, -1));
+
+        cmbEspecialidad.setBackground(new java.awt.Color(153, 153, 153));
+        cmbEspecialidad.setForeground(new java.awt.Color(255, 255, 255));
+        cmbEspecialidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Musculación", "CrossFit", "Cardio", "Funcional", "Powerlifting", "Nutrición Deportiva", "Personal Trainer" }));
+        DatosEntre.add(cmbEspecialidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 10, 110, -1));
+
+        chkEstado.setText("Activo");
+        DatosEntre.add(chkEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 50, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/EntreBack.png"))); // NOI18N
+        DatosEntre.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 680, 130));
+
+        Botones.setBackground(new java.awt.Color(204, 204, 204));
+
+        btnNuevo.setBackground(new java.awt.Color(102, 0, 0));
+        btnNuevo.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnNuevo.setForeground(new java.awt.Color(255, 255, 255));
+        btnNuevo.setText("Nuevo");
+
+        btnLimpiar.setBackground(new java.awt.Color(102, 0, 0));
+        btnLimpiar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnLimpiar.setForeground(new java.awt.Color(255, 255, 255));
+        btnLimpiar.setText("Limpiar");
+
+        btnGuardar.setBackground(new java.awt.Color(102, 0, 0));
+        btnGuardar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnGuardar.setForeground(new java.awt.Color(255, 255, 255));
+        btnGuardar.setText("Guardar");
+
+        btnEditar.setBackground(new java.awt.Color(102, 0, 0));
+        btnEditar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setText("Editar");
+
+        btnEliminar.setBackground(new java.awt.Color(102, 0, 0));
+        btnEliminar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Eliminar");
+
+        btnBuscar.setBackground(new java.awt.Color(102, 0, 0));
+        btnBuscar.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Buscar");
+        btnBuscar.addActionListener(this::btnBuscarActionPerformed);
+
+        javax.swing.GroupLayout BotonesLayout = new javax.swing.GroupLayout(Botones);
+        Botones.setLayout(BotonesLayout);
+        BotonesLayout.setHorizontalGroup(
+            BotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonesLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(btnNuevo, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(btnEliminar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(27, 27, 27)
+                .addComponent(btnBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(btnLimpiar, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(14, 14, 14))
+        );
+        BotonesLayout.setVerticalGroup(
+            BotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BotonesLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BotonesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnNuevo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnLimpiar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEditar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnEliminar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscar))
+                .addContainerGap())
+        );
+
+        Buscar.setBackground(new java.awt.Color(204, 204, 204));
+
+        lblBuscar.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        lblBuscar.setText("Buscar:");
+
+        btnBuscarEntrenador.setBackground(new java.awt.Color(102, 0, 0));
+        btnBuscarEntrenador.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnBuscarEntrenador.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscarEntrenador.setText("Buscar");
+
+        txtBuscar.setBackground(new java.awt.Color(204, 204, 204));
+        txtBuscar.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        javax.swing.GroupLayout BuscarLayout = new javax.swing.GroupLayout(Buscar);
+        Buscar.setLayout(BuscarLayout);
+        BuscarLayout.setHorizontalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BuscarLayout.createSequentialGroup()
+                .addGap(147, 147, 147)
+                .addComponent(lblBuscar)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(txtBuscar)
+                .addGap(18, 18, 18)
+                .addComponent(btnBuscarEntrenador, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(144, 144, 144))
+        );
+        BuscarLayout.setVerticalGroup(
+            BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BuscarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(BuscarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblBuscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnBuscarEntrenador, javax.swing.GroupLayout.PREFERRED_SIZE, 16, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(344, 344, 344))
+        );
+
+        tblEntrenadores.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
+            },
+            new String [] {
+                "Id", "Dni", "Nombres", "Apellidos", "Especialidad", "Telefono", "Estado"
+            }
+        ));
+        jScrollPane1.setViewportView(tblEntrenadores);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(DatosEntre, javax.swing.GroupLayout.PREFERRED_SIZE, 671, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(9, Short.MAX_VALUE))
+            .addComponent(Botones, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(Buscar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jScrollPane1)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(DatosEntre, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Botones, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(Buscar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 135, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -70,5 +267,28 @@ public class FrmEntrenadores extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Botones;
+    private javax.swing.JPanel Buscar;
+    private javax.swing.JPanel DatosEntre;
+    private javax.swing.JButton btnBuscar;
+    private javax.swing.JButton btnBuscarEntrenador;
+    private javax.swing.JButton btnEditar;
+    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btnGuardar;
+    private javax.swing.JButton btnLimpiar;
+    private javax.swing.JButton btnNuevo;
+    private javax.swing.JCheckBox chkEstado;
+    private javax.swing.JComboBox<String> cmbEspecialidad;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel lblBuscar;
+    private javax.swing.JTable tblEntrenadores;
+    private javax.swing.JTextField txtApellidos;
+    private javax.swing.JTextField txtBuscar;
+    private javax.swing.JTextField txtCorreo;
+    private javax.swing.JTextField txtDni;
+    private javax.swing.JTextField txtId;
+    private javax.swing.JTextField txtNombres;
+    private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
 }

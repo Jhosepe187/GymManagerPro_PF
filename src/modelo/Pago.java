@@ -9,14 +9,14 @@ package modelo;
  * @author jhose
  */
 public class Pago {
-     private int idPago;
-    private Cliente cliente;
-    private double monto;
-    private String fechaPago;
-    private String metodoPago;
-    private Cliente cliente;
-    private Membresia membresia;
+   private int idPago;
+   private Cliente cliente;
+   private Membresia membresia;
+   private String fechaPago;
+   private double monto;
+   private String metodoPago;
 
+   
     public Pago() {
     }
 

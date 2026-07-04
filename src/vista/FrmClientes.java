@@ -57,9 +57,9 @@ public class FrmClientes extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Gestionar Clientes");
-        setMaximumSize(new java.awt.Dimension(680, 347));
-        setMinimumSize(new java.awt.Dimension(680, 347));
-        setPreferredSize(new java.awt.Dimension(680, 347));
+        setMaximumSize(new java.awt.Dimension(680, 350));
+        setMinimumSize(new java.awt.Dimension(680, 350));
+        setPreferredSize(new java.awt.Dimension(680, 350));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

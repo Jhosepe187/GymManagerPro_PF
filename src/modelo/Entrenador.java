@@ -10,6 +10,12 @@ package modelo;
  */
 public class Entrenador extends Persona {
 
+    private int id;
+    private String dni;
+    private String nombres;
+    private String apellidos;
+    private String telefono;
+    private String correo;
     private String especialidad;
     private boolean estado;
 
